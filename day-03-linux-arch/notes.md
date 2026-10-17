@@ -37,3 +37,8 @@
 - Hybrid kernel: A mix of both. It keeps a microkernel-like structure but runs more services inside the kernel for speed. Windows (NT kernel) and macOS (XNU) are examples.
 - Exokernel (less common): A minimal kernel that only protects and allocates hardware, leaving applications to manage resources themselves. It’s mostly used in research.
 - Nanokernel: An extremely small kernel that handles only basic hardware tasks like interrupts and timers, leaving everything else to higher layers. It’s lighter than a microkernel, but needs more software on top to be useful.
+
+# General Commands
+- whoami--> to check the username
+- hostname --> to check the hostname
+- pwd --> to print the present working directory
