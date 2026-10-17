@@ -1,4 +1,5 @@
-command -flag/options Arguments
+`command<space>-flag/options<space>Arguments`
+
 flags are the behavior of command and arguments are the links or path
 
 
