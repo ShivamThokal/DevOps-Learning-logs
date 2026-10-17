@@ -31,7 +31,7 @@
 - Applications and utilities: The programs you actually use, such as text editors, browsers, and command-line tools like ls and grep. They run on top of the shell and kernel.
 - User: You, the person giving instructions through the applications or the shell.
 
-# Types pf Kernel:
+# Types of Kernel:
 - Monolithic kernel: The whole operating system (process management, memory, file systems, device drivers) runs in one large block in kernel space. It’s fast, but a bug in one part can crash the whole system. Linux and traditional Unix use this design.
 - Microkernel: Only the essentials (basic memory, process scheduling, communication between processes) stay in the kernel. Everything else, like drivers and file systems, runs as separate user-space services. It’s more stable and secure, but slower because of extra communication. Minix is an example.
 - Hybrid kernel: A mix of both. It keeps a microkernel-like structure but runs more services inside the kernel for speed. Windows (NT kernel) and macOS (XNU) are examples.

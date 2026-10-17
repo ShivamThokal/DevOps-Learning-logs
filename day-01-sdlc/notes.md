@@ -9,6 +9,7 @@ Cloud is platform which provided services like storage, security, networking etc
 - SDLC or Software Development Life Cycle is basically the process involved in making of the application from scratch to production level.
 
 - The phases of SDLC are:
+
 ![SDLC diagram](images/sdlc.png)
 
 SLA stands for Service Level Agreement
