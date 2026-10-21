@@ -1,6 +1,9 @@
 # What is Cloud?
 Cloud is platform which provided services like storage, security, networking etc.
 
+# What is DevOps?
+DevOps is a set of practices, tools, and a culture that brings software development (Dev) and IT operations (Ops) together so teams can build, test, release, and run software faster and more reliably.
+
 # What is an application?
 - An application is basically a piece of code that is made to make day to day tasks more easy.
 - An application consists of: front end ---> backend ---> database
