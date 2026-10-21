@@ -13,3 +13,5 @@ Cloud is platform which provided services like storage, security, networking etc
 ![SDLC diagram](images/sdlc.png)
 
 SLA stands for Service Level Agreement
+
+Dated: 12th October 2026
