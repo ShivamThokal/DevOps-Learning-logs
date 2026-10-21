@@ -16,3 +16,5 @@ flags are the behavior of command and arguments are the links or path
 `free -k` --> shows memory in kb
 `free -m` --> shows memory in mb
 `free -g` --> shows memory in gb
+
+Dated: 15th October 2026
