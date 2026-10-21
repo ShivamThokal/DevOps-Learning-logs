@@ -12,3 +12,6 @@
 - The offers Pay as you go facility
 
 AWS came in 2004.
+
+
+Dated: 13th October 2026
