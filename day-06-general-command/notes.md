@@ -1,5 +1,9 @@
 # General Commands for File Management (day 5 continued..)
 - `mkdir <dirname>` --> to create new directory
+- `mkdir -p <dirname>` --> to create parent directory along with child directory.
+
+`mkdir -p Cloudblitz/Notes`
+
 - `rmdir <dirname>` --> to remove or delete directory
 - `cd` --> to change directory
 
