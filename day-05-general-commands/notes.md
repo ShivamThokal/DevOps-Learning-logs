@@ -7,3 +7,5 @@
 - `ls` --> to list directory
 - `rm <filename` --> to remove or delete file
 `rm <filename1> <filename2>` --> to delete multiple files in one go
+
+Dated: 15th October 2026
