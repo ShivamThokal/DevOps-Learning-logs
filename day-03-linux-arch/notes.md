@@ -42,3 +42,6 @@
 - whoami--> to check the username
 - hostname --> to check the hostname
 - pwd --> to print the present working directory
+
+
+Dated: 14th October 2026
