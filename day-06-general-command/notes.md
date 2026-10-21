@@ -5,6 +5,9 @@
 `mkdir -p Cloudblitz/Notes`
 
 - `rmdir <dirname>` --> to remove or delete directory
+
+Note: `rmdir` command can only delete empty directories. If the directory contains files or subdirectories, it will not be deleted.
+
 - `cd` --> to change directory
 
 `cd ..` --> to go to parent directory
