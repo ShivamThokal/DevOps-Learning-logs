@@ -1,5 +1,6 @@
 # General Commands for File Management (day 5 continued..)
 - `mkdir <dirname>` --> to create new directory
+- `rmdir <dirname>` --> to remove or delete directory
 - `cd` --> to change directory
 
 `cd ..` --> to go to parent directory
