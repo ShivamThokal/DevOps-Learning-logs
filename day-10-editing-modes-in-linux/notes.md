@@ -12,7 +12,7 @@ Command mode is the default mode in which you can navigate through the text, del
 - `dd` --> Delete the current line
 - `'n'dd` --> Delete 'n' number of lines
 - `dw` --> Delete the single word
-- `'n'dw --> Delete 'n' number of words
+- `'n'dw` --> Delete 'n' number of words
 - `G` --> Go to last line
 - `gg` --> To go to first line
 - `'n'gg` --> To go 'n'th line
