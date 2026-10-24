@@ -13,7 +13,7 @@ DevOps is a set of practices, tools, and a culture that brings software developm
 
 - The phases of SDLC are:
 
-![SDLC diagram](images/sdlc.png)
+![SDLC diagram](images/SoftwareDevelopmentLifeCycle.png)
 
 SLA stands for Service Level Agreement
 
