@@ -36,6 +36,8 @@ Command mode is the default mode in which you can navigate through the text, del
 - `:wq!` --> save and quit forcefully(in some files the alteration is not allowed so to forcefully do it, this shortcut is used)
 - `/word` --> search word and also highlights the word searched
 - `:noh` --> removes the highlight
+- `:set nonu` --> hides numbers (line numbers)
+- `:set nu` --> shows numbers (line numbers)
 
 ## Visual Mode
 
