@@ -12,9 +12,9 @@ flags are the behavior of command and arguments are the links or path
 - `man <command>` --> show up manual for the given command
 - `<command> --help` --> to check the available flags
 - `free` --> shows up the memory info.
-      `free -h` --> shows memory in a human-readable format
-      `free -k` --> shows memory in kb
-      `free -m` --> shows memory in mb
-      `free -g` --> shows memory in gb
+      - `free -h` --> shows memory in a human-readable format
+      - `free -k` --> shows memory in kb
+      - `free -m` --> shows memory in mb
+      - `free -g` --> shows memory in gb
     
 Dated: 15th October 2026
