@@ -5,8 +5,8 @@
 - Root User
 - System User
 
-<!-- 
-![Difference Between The Linux User](images\linux_user_types_comparison.png) -->
+
+![Difference Between The Linux User](images\linux_user_types_comparison.png)
 
 ### Some commands for user management
 - `sudo -i` --> to switch to root user
