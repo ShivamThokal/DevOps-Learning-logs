@@ -3,10 +3,11 @@
 `useradd -u 3000 -g 2000 -c "dev" -m -d /home/dev -s /bin/sh Denver`
 
 Note:
+
     - group can we edited only if a group exists before
 
     - `-m` --> to create a home directory with the name of user
-    
+
     - `-d` --> to give a personalized name to the directory
 
 
