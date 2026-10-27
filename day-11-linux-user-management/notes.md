@@ -6,7 +6,7 @@
 - System User
 
 
-![Difference Between The Linux User](images\linux_user_types_comparison.png)
+![Difference Between The Linux User](images/comparison_between_user_types_in_linux.png)
 
 ### Some commands for user management
 - `sudo -i` --> to switch to root user
