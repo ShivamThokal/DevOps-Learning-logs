@@ -25,7 +25,7 @@ eg. `usermod -u 3000 kali`
 
 - encrypted password --> $y$j9T$aAqVqCXElakDBUvcM7oyv/$l7PnexCC6Y3c8UrUjQuTy/lBPxTzggCZe43/YOhaSX3
 
-- days count from 1st 1970 till the last password change -->20753  --> `chage -d`
+- days count from 1st Jan 1970 till the last password change -->20753  --> `chage -d`
 
 - min days --> 0 i.e. for minimum 2 days the user cannot change the password --> `chage -m`
 
