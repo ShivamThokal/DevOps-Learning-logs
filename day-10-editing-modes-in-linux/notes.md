@@ -44,3 +44,5 @@ Command mode is the default mode in which you can navigate through the text, del
 - `v` --> select character-wise
 - `V` --> select line-wise
 - `Ctrl + v` --> select by block
+
+Dated: 23 October 2026
