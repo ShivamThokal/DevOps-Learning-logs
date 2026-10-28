@@ -35,7 +35,7 @@ eg. `usermod -u 3000 kali`
 
 - password inactive --> extra days or time given to expiry of passwords --> `chage -I`
 
-- account expiry --> days after which the account would expire --> `chage -E`
+- account expiry --> days after which the account would be disabled (userdata not deleted, it stays) --> `chage -E`
 
 - future use --> ? (for future use)
 
