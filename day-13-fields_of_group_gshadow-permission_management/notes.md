@@ -54,20 +54,21 @@ Adds `pratik` to the supplementary membership of `dev`.
 
 #### Other ways to add user to group
 
-```text
+
 using usermod
-```
+
+
 
 
 ```bash
 usermod -aG dev pratik
 ```
 
-This will as `pratik` to `dev` group
+This will add `pratik` to `dev` group
 
-```text
+
 using adduser
-```
+
 
 ```bash
 adduser pratik dev
@@ -102,6 +103,8 @@ Example:
 sudo gpasswd dev
 ```
 
+---
+
 # Fields of `/etc/gshadow`
 
 ```text
@@ -131,6 +134,8 @@ Example:
 ```bash
 sudo gpasswd -A pratik test
 ```
+
+---
 
 # Permission Management in Linux
 
