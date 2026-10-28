@@ -38,11 +38,11 @@ Types of Editors:
 - executable mode: This mode allows you to execute shell commands from within vim. You can enter this mode by pressing `!` in normal mode.
 
 
-Dated: 22 October 2026
-
-
 ### Basic usage of vim editor:
 - To open a file: `vim filename`
 - To save changes: `:w`
 - To save changes and exit: `:wq`
 - To exit without saving changes: `:q!`
+
+
+Dated: 22 October 2026
