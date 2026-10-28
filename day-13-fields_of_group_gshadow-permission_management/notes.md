@@ -235,6 +235,7 @@ This will give read permission to user, group and others
 
 
 > **Note:** To lock and unlock user
+
 | Operation | Command |
 |---|---|
 | Lock user | `usermod -L pratik |
