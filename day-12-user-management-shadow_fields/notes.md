@@ -42,3 +42,7 @@ eg. `usermod -u 3000 kali`
 `chage -d 0 -m 0 -M 0 kali` --> force user to change their password
 
 `usermod -s /sbin/nologin kali` --> to remove the login shell of any user
+
+
+
+Dated: 27 October 2026
