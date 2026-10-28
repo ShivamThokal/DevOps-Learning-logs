@@ -65,3 +65,8 @@ kali:x:1002:1002:,,,:/home/kali:/bin/bash
 command snippet : `usermod -flag "comments" <username>`
 
 eg. `usermod -c "kali user made for practice" kali`
+
+
+
+
+Dated: 26 October 2026
