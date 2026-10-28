@@ -14,3 +14,4 @@
 - [Day 10 - Editing Modes in Linux](day-10-editing-modes-in-linux/notes.md)
 - [Day 11 - Linux User Management and passwd Fields](day-11-linux-user-management-passwd_fields/notes.md)
 - [Day 12 - User Management and shadow Fields](day-12-user-management-shadow_fields/notes.md)
+- [Day 13 - Fields of group and gshadow and Permission Management](day-13-fields_of_group_gshadow-permission_management/notes.md)
