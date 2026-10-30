@@ -16,3 +16,4 @@
 - [Day 12 - User Management and shadow Fields](day-12-user-management-shadow_fields/notes.md)
 - [Day 13 - Fields of group and gshadow and Permission Management](day-13-fields_of_group_gshadow-permission_management/notes.md)
 - [Day 14 - Numerical Method(Permission Management) and link count](day-14-numerical_method-link_count/notes.md)
+- [Day 15 Archiving and Compression of file/directories](day-15-archiving-compression/notes.md)
