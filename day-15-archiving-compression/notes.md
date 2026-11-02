@@ -46,7 +46,7 @@ Tool or technique to reduce the size of a file
 **1. To compress file**
 
 ```bash
-gzip opt.tar
+gzip opt.tar <source>
 ```
 
 **2. To decompress file**
