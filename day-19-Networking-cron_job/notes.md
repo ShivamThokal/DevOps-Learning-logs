@@ -15,15 +15,7 @@ A **network** is a group of two or more devices connected to each other so they 
 
 A **network topology** describes how devices are arranged and connected in a network.
 
-| Topology | Meaning |
-|---|---|
-| Point-to-Point | A direct connection between two endpoints |
-| Bus | Multiple devices share a single main communication line |
-| Star | All devices connect to a central device, such as a hub or switch |
-| Ring | Devices are connected in a circular loop; data typically travels around the ring |
-| Mesh | Devices are interconnected through multiple paths |
-| Tree (Hierarchical) | A hierarchical arrangement that commonly combines multiple star networks |
-| Hybrid | A combination of two or more different network topologies |
+[Types of Network Topology](\images\types_of_topology.png)
 
 ---
 
