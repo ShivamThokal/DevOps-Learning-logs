@@ -15,7 +15,7 @@ A **network** is a group of two or more devices connected to each other so they 
 
 A **network topology** describes how devices are arranged and connected in a network.
 
-![Types of Network Topology](\images\types_of_topologies.png)
+![Types of Network Topology](images/types_of_topologies.png)
 
 ---
 
