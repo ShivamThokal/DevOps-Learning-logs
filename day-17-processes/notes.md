@@ -61,37 +61,23 @@ F S UID          PID    PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME C
 1 I root           6       2  0  60 -20 -     0 -      11:23 ?        00:00:00 [kworker/R-kvfree_rcu_reclaim]
 ```
 
-  Field     Meaning
-  --------- ------------------------------------------------------
-  `F`       Flags
-
-  `S`       Process state/status
-  
-  `UID`     User ID / owner of the process
-  
-  `PID`     Process ID
-  
-  `PPID`    Parent process ID
-  
-  `C`       CPU utilization (scheduler-related CPU usage field)
-  
-  `PRI`     Process priority
-  
-  `NI`      Nice value
-  
-  `ADDR`    Memory address (often shown as `-`)
-  
-  `SZ`      Process size
-  
-  `WCHAN`   Kernel function/channel where the process is waiting
-  
-  `STIME`   Start time of the process
-  
-  `TTY`     Controlling terminal
-  
-  `TIME`    Cumulative CPU time used by the process
-  
-  `CMD`     Command used to start the process
+ | Field | Meaning |
+|--------|--------|
+| `F` | Flags |
+| `S` | Process state/status |
+| `UID` | User ID / owner of the process |
+| `PID` | Process ID |
+| `PPID` | Parent process ID |
+| `C` | CPU utilization (scheduler-related CPU usage field) |
+| `PRI` | Process priority |
+| `NI` | Nice value |
+| `ADDR` | Memory address (often shown as `-`\) |
+| `SZ` | Process size |
+| `WCHAN` | Kernel function/channel where the process is waiting |
+| `STIME` | Start time of the process |
+| `TTY` | Controlling terminal |
+| `TIME` | Cumulative CPU time used by the process |
+| `CMD` | Command used to start the process |
 
 ## Find a Process by Name
 
