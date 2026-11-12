@@ -75,27 +75,14 @@ find /root -iname "README"
 ### 1.4 Find by time
 
 Linux `find` provides several time filters:
-
-  -----------------------------------------------------------------------
-  Option                  Checks                  Unit
-  ----------------------- ----------------------- -----------------------
-  `-ctime`                Last change to file     Days
-                          metadata/status (inode  
-                          change time)            
-
-  `-cmin`                 Last metadata/status    Minutes
-                          change                  
-
-  `-mtime`                Last content            Days
-                          modification            
-
-  `-mmin`                 Last content            Minutes
-                          modification            
-
-  `-atime`                Last access/read time   Days
-
-  `-amin`                 Last access/read time   Minutes
-  -----------------------------------------------------------------------
+| Option   | Checks                                                  | Unit    |
+| -------- | ------------------------------------------------------- | ------- |
+| `-ctime` | Last change to file metadata/status (inode change time) | Days    |
+| `-cmin`  | Last metadata/status change                             | Minutes |
+| `-mtime` | Last content modification                               | Days    |
+| `-mmin`  | Last content modification                               | Minutes |
+| `-atime` | Last access/read time                                   | Days    |
+| `-amin`  | Last access/read time                                   | Minutes |
 
 **Examples:**
 
@@ -111,11 +98,6 @@ find /root/learn -mmin 3
     3-minute age range.
 -   `-ctime 0`: items whose metadata/status changed less than 24 hours
     ago.
-
-**Important correction:** `ctime` does **not** mean creation time. It is
-the inode/status change time. For example, changing permissions or
-ownership can update `ctime`. Linux `find` does not provide a portable,
-general-purpose creation-time test.
 
 #### Understanding `n`, `+n`, and `-n`
 
@@ -273,27 +255,15 @@ grep "ubuntu" os-release
 This displays lines containing the text `ubuntu`.
 
 ### Common `grep` options
-
-  -------------------------------------------------------------------------------
-  Option                  Meaning                 Example
-  ----------------------- ----------------------- -------------------------------
-  `-i`                    Ignore case differences `grep -i "ubuntu" os-release`
-
-  `-c`                    Count matching lines    `grep -c "ubuntu" os-release`
-
-  `-v`                    Display lines that do   `grep -v "ubuntu" os-release`
-                          not match               
-
-  `-n`                    Show line numbers       `grep -n "ubuntu" os-release`
-
-  `-r`                    Search recursively in   `grep -r "ubuntu" /etc`
-                          directories             
-
-  `-w`                    Match a whole word      `grep -w "root" file.txt`
-
-  `-l`                    Show only filenames     `grep -l "ubuntu" *.txt`
-                          with matches            
-  -------------------------------------------------------------------------------
+| Option | Meaning                           | Example                       |
+| ------ | --------------------------------- | ----------------------------- |
+| `-i`   | Ignore case differences           | `grep -i "ubuntu" os-release` |
+| `-c`   | Count matching lines              | `grep -c "ubuntu" os-release` |
+| `-v`   | Display lines that do not match   | `grep -v "ubuntu" os-release` |
+| `-n`   | Show line numbers                 | `grep -n "ubuntu" os-release` |
+| `-r`   | Search recursively in directories | `grep -r "ubuntu" /etc`       |
+| `-w`   | Match a whole word                | `grep -w "root" file.txt`     |
+| `-l`   | Show only filenames with matches  | `grep -l "ubuntu" *.txt`      |
 
 **Important:** `grep -c` counts the number of matching **lines**, not
 the total number of occurrences of the pattern.
@@ -437,43 +407,27 @@ wc -m file.txt    # Number of characters
 
 ## 7. Quick revision
 
-  Requirement                       Command
-  --------------------------------- ----------------------------
-  Find regular files                `find . -type f`
-  Find directories                  `find . -type d`
-  Find by owner                     `find . -user username`
-  Find by filename                  `find . -name "filename"`
-  Find recently modified items      `find . -mtime -1`
-  Find by permissions               `find . -perm 755`
-  Display file contents             `cat file.txt`
-  Overwrite/create a file           `cat > file.txt`
-  Append to a file                  `cat >> file.txt`
-  Search for a pattern              `grep "text" file.txt`
-  Search without case sensitivity   `grep -i "text" file.txt`
-  Count matching lines              `grep -c "text" file.txt`
-  Sort in reverse order             `sort -r file.txt`
-  Sort numbers numerically          `sort -n numbers.txt`
-  Remove adjacent duplicates        `uniq file.txt`
-  Count all duplicate lines         `sort file.txt \| uniq -c`
-  Count lines                       `wc -l file.txt`
-  Count words                       `wc -w file.txt`
+| Requirement                     | Command                     |
+| ------------------------------- | --------------------------- |
+| Find regular files              | `find . -type f`            |
+| Find directories                | `find . -type d`            |
+| Find by owner                   | `find . -user username`     |
+| Find by filename                | `find . -name "filename"`   |
+| Find recently modified items    | `find . -mtime -1`          |
+| Find by permissions             | `find . -perm 755`          |
+| Display file contents           | `cat file.txt`              |
+| Overwrite/create a file         | `cat > file.txt`            |
+| Append to a file                | `cat >> file.txt`           |
+| Search for a pattern            | `grep "text" file.txt`      |
+| Search without case sensitivity | `grep -i "text" file.txt`   |
+| Count matching lines            | `grep -c "text" file.txt`   |
+| Sort in reverse order           | `sort -r file.txt`          |
+| Sort numbers numerically        | `sort -n numbers.txt`       |
+| Remove adjacent duplicates      | `uniq file.txt`             |
+| Count all duplicate lines       | `sort file.txt \\| uniq -c` |
+| Count lines                     | `wc -l file.txt`            |
+| Count words                     | `wc -w file.txt`            |
 
-## 8. Practice exercises
-
-Try these commands in a test directory so that you do not accidentally
-change important system files.
-
-1.  Create `names.txt` using `cat > names.txt` and enter five names.
-2.  Append two more names using `cat >> names.txt`.
-3.  Display the file using `cat names.txt`.
-4.  Find all `.txt` files under your home directory.
-5.  Find all directories under your home directory.
-6.  Search `names.txt` for a name using `grep`.
-7.  Repeat the search using `grep -i`.
-8.  Sort the names in ascending and reverse order.
-9.  Add duplicate names, then compare `uniq names.txt` with
-    `sort names.txt | uniq`.
-10. Count the lines and words using `wc -l` and `wc -w`.
 
 ------------------------------------------------------------------------
 
