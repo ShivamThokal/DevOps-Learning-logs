@@ -121,16 +121,19 @@ sleep 200 &
 -   The shell returns control to you immediately, so you can enter other
     commands while the process is running.
 
-## Homework (H-W)
+## Difference between ps -elf , ps -a and ps -aux
 
-Understand the difference between:
-
-``` bash
-ps -elf
-ps -a
-ps -aux
-```
-
-**Quick note:** `ps -aux` is commonly seen in practice, but the usual
-BSD-style syntax is `ps aux` (without the hyphen). Compare the options
-and the processes displayed on your Linux system.
+| Feature | `ps -elf` | `ps -a` | `ps aux` |
+|--------|--------|--------|--------|
+| Purpose | Displays all processes in long format | Displays processes associated with terminals | Displays processes belonging to all users |
+| Process selection | All processes (`-e`\) | Terminal-associated processes | All users' processes (`a` and `x`\) |
+| Format | Long format | Default format | BSD user-oriented format |
+| User information | UID | Not displayed by default | USER |
+| Process ID | PID | PID | PID |
+| Parent Process ID | PPID | Not displayed | Not displayed |
+| CPU usage | C (CPU factor) | Not displayed | %CPU |
+| Memory usage | SZ (process size) | Not displayed | %MEM, VSZ, RSS |
+| Process priority | PRI, NI | Not displayed | Not displayed |
+| Process state | S | Not displayed | STAT |
+| Terminal | TTY | TTY | TTY |
+| Best use | Detailed process analysis | Checking terminal-associated processes | Monitoring CPU and memory usage |
