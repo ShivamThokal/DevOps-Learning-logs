@@ -20,4 +20,4 @@
 - [Day 16 cat, grep, sort, uniq, find](day-16-cat-grep-uniq-sort-find/notes.md)
 - [Day 17 Processes in Linux](day-17-processes/notes.md)
 - [Day 18 Process Management](day-18-process-management/notes.md)
-- [Day 19 Basic Networking and cron jobs](day-19-Networking-cron_job)
+- [Day 19 Basic Networking and cron jobs](day-19-Networking-cron_job/notes.md)
