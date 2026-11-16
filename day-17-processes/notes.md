@@ -137,3 +137,9 @@ sleep 200 &
 | Process state | S | Not displayed | STAT |
 | Terminal | TTY | TTY | TTY |
 | Best use | Detailed process analysis | Checking terminal-associated processes | Monitoring CPU and memory usage |
+
+
+
+---
+
+Dated : 3 November 2026
