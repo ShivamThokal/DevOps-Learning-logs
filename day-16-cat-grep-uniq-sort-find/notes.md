@@ -443,3 +443,7 @@ wc -m file.txt    # Number of characters
 -   Be careful with `>` because it overwrites existing file content.
 -   Check the output of a `find` command before adding destructive
     actions such as `-delete`.
+
+---
+
+Dated : 2 November 2026
