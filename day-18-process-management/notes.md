@@ -244,6 +244,3 @@ The `-m` option creates the user's home directory and populates it using the ske
 
 ---
 **Date:** 4 November 2026
-
-output_path.write_text(content, encoding="utf-8")
-print(f"Created {output_path} ({output_path.stat().st_size:,} bytes)")
