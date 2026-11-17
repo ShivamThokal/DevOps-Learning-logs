@@ -44,7 +44,7 @@ Virtualization is the creation of a virtual version of hardware, allowing multip
 ### Architecture of virtualization
 Type 2 Hypervisor
 
-![Architecture of virtualization](images\arch_of_virtualization.png)
+![Architecture of virtualization](images/arch_of_virtualization.png)
 
 
 
