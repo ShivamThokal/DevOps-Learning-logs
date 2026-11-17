@@ -66,8 +66,8 @@ A platform that provide services over the internet, services such as networking,
 |Networking|	Managed by organization|Managed by provider|Managed by provider|Managed by provider|
 |Storage	|Managed by organization|Managed by provider|Managed by provider	|Managed by provider|
 |Operating System|Managed by organization|Managed by user|Managed by provider|Managed by provider|
-|Runtime	|Managed by organization	Managed by user	Managed by provider	Managed by provider|
-|Applications|	Managed by organization	Managed by user	Managed by user	Managed by provider|
+|Runtime	|Managed by organization|Managed by user|Managed by provider|Managed by provider|
+|Applications|Managed by organization|Managed by user|Managed by user|Managed by provider|
 |Data|Managed by organization|Managed by user|Managed by user|Managed by user (responsibility for data remains with customer)|
 |Maintenance|Organization|Shared responsibility|Mostly provider|Mostly provider|
 |Control	|Maximum|High|Moderate|Least|
