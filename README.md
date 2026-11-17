@@ -1,23 +1,27 @@
-# Linux Learning Journey
+# DevOps Cloud Learning Journey
 
-## Daily Notes
+## 🐧 Linux Logs — Completed ✅
 
-- [Day 1 - SDLC](day-01-sdlc/notes.md)
-- [Day 2 - Operating System](day-02-os/notes.md)
-- [Day 3 - Linux Architecture](day-03-linux-arch/notes.md)
-- [Day 4 - General Commands](day-04-general-commands/notes.md)
-- [Day 5 - General Commands](day-05-general-commands/notes.md)
-- [Day 6 - General Command](day-06-general-command/notes.md)
-- [Day 7 - Path Types and Revisions](day-07-pathType-and-revisions/notes.md)
-- [Day 8 - rm, cp, mv Commands](day-08-rm_cp_mv-commands/notes.md)
-- [Day 9 - Directory Editing in Linux](day-09-directories-editing_in_linux/notes.md)
-- [Day 10 - Editing Modes in Linux](day-10-editing-modes-in-linux/notes.md)
-- [Day 11 - Linux User Management and passwd Fields](day-11-linux-user-management-passwd_fields/notes.md)
-- [Day 12 - User Management and shadow Fields](day-12-user-management-shadow_fields/notes.md)
-- [Day 13 - Fields of group and gshadow and Permission Management](day-13-fields_of_group_gshadow-permission_management/notes.md)
-- [Day 14 - Numerical Method(Permission Management) and link count](day-14-numerical_method-link_count/notes.md)
-- [Day 15 Archiving and Compression of file/directories](day-15-archiving-compression/notes.md)
-- [Day 16 cat, grep, sort, uniq, find](day-16-cat-grep-uniq-sort-find/notes.md)
-- [Day 17 Processes in Linux](day-17-processes/notes.md)
-- [Day 18 Process Management](day-18-process-management/notes.md)
-- [Day 19 Basic Networking and cron jobs](day-19-Networking-cron_job/notes.md)
+- [Day 1 - SDLC](A---Linux-Logs/day-01-sdlc/notes.md)
+- [Day 2 - Operating System](A---Linux-Logs/day-02-os/notes.md)
+- [Day 3 - Linux Architecture](A---Linux-Logs/day-03-linux-arch/notes.md)
+- [Day 4 - General Commands](A---Linux-Logs/day-04-general-commands/notes.md)
+- [Day 5 - General Commands](A---Linux-Logs/day-05-general-commands/notes.md)
+- [Day 6 - General Command](A---Linux-Logs/day-06-general-command/notes.md)
+- [Day 7 - Path Types and Revisions](A---Linux-Logs/day-07-pathType-and-revisions/notes.md)
+- [Day 8 - rm, cp, mv Commands](A---Linux-Logs/day-08-rm_cp_mv-commands/notes.md)
+- [Day 9 - Directory Editing in Linux](A---Linux-Logs/day-09-directories-editing_in_linux/notes.md)
+- [Day 10 - Editing Modes in Linux](A---Linux-Logs/day-10-editing-modes-in-linux/notes.md)
+- [Day 11 - Linux User Management and passwd Fields](A---Linux-Logs/day-11-linux-user-management-passwd_fields/notes.md)
+- [Day 12 - User Management and shadow Fields](A---Linux-Logs/day-12-user-management-shadow_fields/notes.md)
+- [Day 13 - Fields of group and gshadow and Permission Management](A---Linux-Logs/day-13-fields_of_group_gshadow-permission_management/notes.md)
+- [Day 14 - Numerical Method (Permission Management) and link count](A---Linux-Logs/day-14-numerical_method-link_count/notes.md)
+- [Day 15 - Archiving and Compression of file/directories](A---Linux-Logs/day-15-archiving-compression/notes.md)
+- [Day 16 - cat, grep, sort, uniq, find](A---Linux-Logs/day-16-cat-grep-uniq-sort-find/notes.md)
+- [Day 17 - Processes in Linux](A---Linux-Logs/day-17-processes/notes.md)
+- [Day 18 - Process Management](A---Linux-Logs/day-18-process-management/notes.md)
+- [Day 19 - Basic Networking and cron jobs](A---Linux-Logs/day-19-Networking-cron_job/notes.md)
+
+---
+
+## ☁️ AWS Logs
