@@ -1,6 +1,6 @@
 # DevOps Cloud Learning Journey
 
-## 🐧 Linux Logs — Completed ✅
+## 🐧 Linux Learning Logs — Completed ✅
 
 - [Day 1 - SDLC](A---Linux-Logs/day-01-sdlc/notes.md)
 - [Day 2 - Operating System](A---Linux-Logs/day-02-os/notes.md)
@@ -24,4 +24,6 @@
 
 ---
 
-## ☁️ AWS Logs
+## ☁️ AWS Learning Logs
+
+- [Day 01 - Virtualization and Cloud](B---AWS-Logs/day-01-virtualization-cloud/notes.md)
