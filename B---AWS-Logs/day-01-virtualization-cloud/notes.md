@@ -73,3 +73,6 @@ A platform that provide services over the internet, services such as networking,
 |Control	|Maximum|High|Moderate|Least|
 |Cost|High initial investment|Pay-as-you-go|Pay-as-you-go|Subscription-based|
 |Example|Company's own data centre|AWS EC2|Google App Engine|Gmail, Google Docs|
+
+---
+Dated : 17 November 2026
