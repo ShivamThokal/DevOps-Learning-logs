@@ -2,7 +2,7 @@
 
 ## Steps
 
-1.  Go to the [AWS website](https://aws.amazon.com/).
+1.  Go to the [AWS website](https://aws.amazon.com/free).
 2.  Choose **Create an AWS Account** and start the signup process.
 3.  Sign up using an email address or an available sign-in option, such as Google (if offered).
 4.  Enter your name and the required account details.
