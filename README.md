@@ -26,4 +26,5 @@
 
 ## ☁️ AWS Learning Logs
 
-- [Day 01 - Virtualization and Cloud](B---AWS-Logs/day-01-virtualization-cloud/notes.md)
+- [Day 1 - Virtualization and Cloud](B---AWS-Logs/day-01-virtualization-cloud/notes.md)
+- [Day 2 -AWS account creation and Port & Protocols](B---AWS-Logs/day-02-aws_account_creation-ports-protocols/notes.md)
