@@ -65,11 +65,39 @@ In simple words, EC2 allows you to create and use virtual servers without purcha
 
 > **Note:** Pricing, discounts, and Free Tier eligibility depend on the current AWS offer, Region, instance type, and account eligibility. Check the pricing shown in your account before launching resources.
 
-## Use cases
 
-- Hosting websites and web applications.
-- Running batch jobs or machine learning workloads.
-- Creating development and testing environments.
+## Use Cases of AWS EC2
+
+### 1. Website and Web Application Hosting
+Host websites, frontend applications, and backend applications using Nginx, Apache, Node.js, Python, etc.
+
+**Example:** Hosting your React + Node.js application.
+
+### 2. Application and API Hosting
+Run backend services, REST APIs, and application servers.
+
+**Example:** Hosting your MERN application's Express.js backend.
+
+### 3. CI/CD and DevOps Infrastructure
+Run build servers, deployment agents, automation scripts, and CI/CD tools.
+
+**Example:** Installing Jenkins on an EC2 instance to automate deployments.
+
+### 4. Database Hosting
+Run database software such as MySQL, PostgreSQL, or MongoDB on EC2 when you need to manage the database infrastructure yourself.
+
+**Example:** Running MongoDB on an Ubuntu EC2 instance.
+
+### 5. Machine Learning and Compute-Intensive Workloads
+Run model training, scientific computing, and GPU-intensive applications using suitable EC2 instance types.
+
+**Example:** Training a deep learning model on a GPU-enabled EC2 instance.
+
+### 6. Docker and Container Hosting
+Install Docker and run multiple containerized applications on EC2. You can also use EC2 instances as the compute infrastructure for ECS or EKS.
+
+### 7. Windows Virtual Machines
+Run Windows Server applications, remote desktop environments, and Windows-based workloads.
 
 ## Important EC2 terms
 
