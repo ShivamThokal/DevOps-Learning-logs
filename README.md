@@ -28,3 +28,4 @@
 
 - [Day 1 - Virtualization and Cloud](B---AWS-Logs/day-01-virtualization-cloud/notes.md)
 - [Day 2 -AWS account creation and Port & Protocols](B---AWS-Logs/day-02-aws_account_creation-ports-protocols/notes.md)
+- [Day 3 - AWS, EC2, Deployment, Security and Remote Access](B---AWS-Logs/day-03-AWS_EC2_Deployment_Security_and_Remote_Access/notes.md)
