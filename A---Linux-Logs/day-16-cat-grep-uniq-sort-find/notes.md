@@ -16,11 +16,11 @@ permissions.
 find <source> -type <type>
 ```
 
-  Type   Meaning
-  ------ ---------------
-  `f`    Regular file
-  `d`    Directory
-  `l`    Symbolic link
+| Type | Meaning |
+|-|-|-|
+| `f` | Regular file |
+| `d` | Directory |
+| `l` | Symbolic link |
 
 **Examples:**
 
