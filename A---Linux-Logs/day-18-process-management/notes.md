@@ -92,6 +92,8 @@ The `top` output includes memory and swap summaries. The exact labels and layout
 | `S` | Process status/state |
 | `%CPU` | CPU utilisation percentage |
 | `%MEM` | Memory utilisation percentage |
+| `TIME+` | Total CPU consumed by the process |
+| `COMMAND` | Name of the command or program running |
 
 ---
 
