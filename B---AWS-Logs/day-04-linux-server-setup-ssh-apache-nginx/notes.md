@@ -353,4 +353,11 @@ sudo journalctl -u apache2
 
 ---
 
+## Servers and Clients Work Together
+
+![How Servers and Clients Work Together](B---AWS-Logs/day-04-linux-server-setup-ssh-apache-nginx/images/How_Servers_and_Clients_Work_Together.png)
+
+
+---
+
 **Dated:** 20 November 2026
