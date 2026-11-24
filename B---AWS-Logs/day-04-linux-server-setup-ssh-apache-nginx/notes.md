@@ -1,4 +1,6 @@
-## 1. SSH configuration on Ubuntu
+# Linux Server Setup: SSH, Apache, Nginx & Reverse Proxy
+
+## 1. SSH Configuration on Ubuntu
 
 **Goal:** Understand the SSH server settings that control root login and password authentication.
 
@@ -48,7 +50,7 @@ If a different cloud-init configuration file exists, inspect that file instead. 
 
 ### Step 4: Validate and restart SSH
 
-Keep your current SSH session open while testing. First validate the configuration:
+Keep your current SSH session open while testing.
 
 ```bash
 sudo sshd -t
@@ -62,7 +64,7 @@ Check the effective settings:
 sudo sshd -T | grep -E 'permitrootlogin|passwordauthentication'
 ```
 
-If the configuration is valid, restart SSH:
+Restart SSH:
 
 ```bash
 sudo systemctl restart ssh
@@ -76,9 +78,11 @@ sudo systemctl restart sshd
 
 ### Important security note
 
-The settings `PermitRootLogin yes` and `PasswordAuthentication yes` allow direct root login and password-based SSH authentication. **Do not expose this configuration to the public internet for production use.**
+The settings `PermitRootLogin yes` and `PasswordAuthentication yes` allow direct root login and password-based SSH authentication.
 
-Safer approach:
+**Do not expose this configuration to the public internet for production use.**
+
+Safer configuration:
 
 ```text
 PermitRootLogin no
@@ -86,11 +90,13 @@ PasswordAuthentication no
 PubkeyAuthentication yes
 ```
 
-Use a normal user with `sudo` privileges and SSH key authentication. If password login is required temporarily for a lab, restrict SSH access in the cloud Security Group to your own IP address (TCP port 22), use a strong password, and revert the setting afterwards. Never close your working SSH session until a second login has been tested successfully.
+Use a normal user with `sudo` privileges and SSH key authentication. If password login is required temporarily for a lab, restrict SSH access in the cloud Security Group to your own IP address (TCP port 22), use a strong password, and revert the setting afterwards.
+
+Never close your working SSH session until a second login has been tested successfully.
 
 ---
 
-## 2. Web servers / application servers
+## 2. Web Servers / Application Servers
 
 | Name | Purpose |
 |---|---|
@@ -98,9 +104,15 @@ Use a normal user with `sudo` privileges and SSH key authentication. If password
 | **Apache HTTP Server** | Web server; package/service name is `httpd` on Amazon Linux and `apache2` on Ubuntu |
 | **Tomcat** | Java application server / Servlet container; runs Java web applications |
 
-### What is a reverse proxy?
+### What is a Reverse Proxy?
 
-A **reverse proxy** receives requests from clients and forwards them to backend application servers. It can also handle SSL/TLS termination, load balancing, caching and routing.
+A **reverse proxy** receives requests from clients and forwards them to backend application servers.
+
+It can also handle:
+- SSL/TLS termination
+- Load balancing
+- Caching
+- Request routing
 
 Example:
 
@@ -117,7 +129,7 @@ Client / Browser
 
 ---
 
-## 3. Identify your Linux distribution
+## 3. Identify Your Linux Distribution
 
 Before installing packages, check the operating system:
 
@@ -125,7 +137,19 @@ Before installing packages, check the operating system:
 cat /etc/os-release
 ```
 
-This guide uses **Amazon Linux 2023** and **Ubuntu 26.10 / 26.04 LTS**. Amazon Linux 2023 uses `dnf`; Ubuntu uses `apt`.
+This guide covers:
+
+- Amazon Linux 2023
+- Ubuntu 26.04 LTS / 26.10
+
+Package managers:
+
+| Operating System | Package Manager |
+|---|---|
+| Amazon Linux 2023 | `dnf` |
+| Ubuntu | `apt` |
+
+---
 
 ## 4. Install Apache HTTP Server on Amazon Linux 2023
 
@@ -158,6 +182,42 @@ httpd -v
 
 Look for `active (running)` in the service status.
 
+### Apache file locations on Amazon Linux
+
+| Purpose | Location |
+|---|---|
+| Main configuration | `/etc/httpd/conf/httpd.conf` |
+| Additional configurations | `/etc/httpd/conf.d/` |
+| Website files (Document Root) | `/var/www/html/` |
+| Access logs | `/var/log/httpd/access_log` |
+| Error logs | `/var/log/httpd/error_log` |
+
+**Where to put website code?**
+
+Place your website files inside:
+
+```bash
+/var/www/html/
+```
+
+Example:
+
+```text
+/var/www/html/
+    index.html
+    style.css
+    script.js
+    images/
+```
+
+Create a test page:
+
+```bash
+echo "<h1>Hello from Apache on Amazon Linux!</h1>" | sudo tee /var/www/html/index.html
+```
+
+---
+
 ## 5. Install Nginx on Amazon Linux 2023
 
 ### Step 1: Update packages
@@ -184,6 +244,42 @@ sudo systemctl enable --now nginx
 sudo systemctl status nginx
 nginx -v
 ```
+
+### Nginx file locations on Amazon Linux
+
+| Purpose | Location |
+|---|---|
+| Main configuration | `/etc/nginx/nginx.conf` |
+| Additional configurations | `/etc/nginx/conf.d/` |
+| Default website files | `/usr/share/nginx/html/` |
+| Access logs | `/var/log/nginx/access.log` |
+| Error logs | `/var/log/nginx/error.log` |
+
+**Where to put website code?**
+
+For the default Nginx website, place your files inside:
+
+```bash
+/usr/share/nginx/html/
+```
+
+Example:
+
+```text
+/usr/share/nginx/html/
+    index.html
+    style.css
+    script.js
+    images/
+```
+
+Create a test page:
+
+```bash
+echo "<h1>Hello from Nginx on Amazon Linux!</h1>" | sudo tee /usr/share/nginx/html/index.html
+```
+
+---
 
 ## 6. Install Apache (`apache2`) on Ubuntu
 
@@ -212,6 +308,44 @@ sudo systemctl status apache2
 apache2 -v
 ```
 
+### Apache file locations on Ubuntu
+
+| Purpose | Location |
+|---|---|
+| Main configuration | `/etc/apache2/apache2.conf` |
+| Ports configuration | `/etc/apache2/ports.conf` |
+| Virtual host configurations | `/etc/apache2/sites-available/` |
+| Enabled websites | `/etc/apache2/sites-enabled/` |
+| Website files (Document Root) | `/var/www/html/` |
+| Access logs | `/var/log/apache2/access.log` |
+| Error logs | `/var/log/apache2/error.log` |
+
+**Where to put website code?**
+
+Place your website files inside:
+
+```bash
+/var/www/html/
+```
+
+Example:
+
+```text
+/var/www/html/
+    index.html
+    style.css
+    script.js
+    images/
+```
+
+Create a test page:
+
+```bash
+echo "<h1>Hello from Apache on Ubuntu!</h1>" | sudo tee /var/www/html/index.html
+```
+
+---
+
 ## 7. Install Nginx on Ubuntu
 
 ### Step 1: Update package lists
@@ -239,16 +373,231 @@ sudo systemctl status nginx
 nginx -v
 ```
 
-## 8. `httpd` vs `apache2` — remember this
+### Nginx file locations on Ubuntu
 
-| Operating system | Apache package | Apache service |
+| Purpose | Location |
+|---|---|
+| Main configuration | `/etc/nginx/nginx.conf` |
+| Additional configurations | `/etc/nginx/conf.d/` |
+| Available website configurations | `/etc/nginx/sites-available/` |
+| Enabled website configurations | `/etc/nginx/sites-enabled/` |
+| Default website files | `/var/www/html/` |
+| Access logs | `/var/log/nginx/access.log` |
+| Error logs | `/var/log/nginx/error.log` |
+
+**Where to put website code?**
+
+For the default Nginx website, place your files inside:
+
+```bash
+/var/www/html/
+```
+
+Example:
+
+```text
+/var/www/html/
+    index.html
+    style.css
+    script.js
+    images/
+```
+
+Create a test page:
+
+```bash
+echo "<h1>Hello from Nginx on Ubuntu!</h1>" | sudo tee /var/www/html/index.html
+```
+
+---
+
+## 8. Where Should We Put Our Website Code?
+
+This is an important concept when deploying a website on a Linux server.
+
+The directory where website files are stored and served from is called the **Document Root**.
+
+### Default Document Root Locations
+
+| Web Server | Operating System | Document Root |
+|---|---|---|
+| Apache (`httpd`) | Amazon Linux | `/var/www/html/` |
+| Apache (`apache2`) | Ubuntu | `/var/www/html/` |
+| Nginx | Amazon Linux | `/usr/share/nginx/html/` |
+| Nginx | Ubuntu | `/var/www/html/` |
+
+### Example: Deploying a Static Website
+
+Suppose you have developed a website containing:
+
+```text
+MyWebsite/
+    index.html
+    about.html
+    style.css
+    script.js
+    images/
+```
+
+You need to copy the website files into the server's Document Root.
+
+For example, on Ubuntu:
+
+```bash
+sudo cp -r MyWebsite/. /var/www/html/
+```
+
+On Amazon Linux Nginx:
+
+```bash
+sudo cp -r MyWebsite/. /usr/share/nginx/html/
+```
+
+**Important:** Replace `MyWebsite` with the actual path to your website directory.
+
+After copying the files, open your browser:
+
+```text
+http://YOUR_PUBLIC_IP
+```
+
+Your website should now be visible.
+
+### Recommended production directory structure
+
+For a custom website, you can also create a separate directory instead of using the default one:
+
+```bash
+sudo mkdir -p /var/www/mywebsite
+```
+
+Place your website files there:
+
+```text
+/var/www/mywebsite/
+    index.html
+    css/
+    js/
+    images/
+```
+
+You must then update the web server's virtual host or server block configuration to point to:
+
+```text
+/var/www/mywebsite
+```
+
+The server will not automatically serve this new directory until the configuration is updated.
+
+---
+
+## 9. Web Server Configuration Files
+
+Configuration files tell the web server where website files are located and how requests should be handled.
+
+### Apache on Amazon Linux
+
+Main configuration:
+
+```bash
+sudo nano /etc/httpd/conf/httpd.conf
+```
+
+Additional website configurations:
+
+```bash
+cd /etc/httpd/conf.d/
+```
+
+### Apache on Ubuntu
+
+Main configuration:
+
+```bash
+sudo nano /etc/apache2/apache2.conf
+```
+
+Website configurations:
+
+```bash
+cd /etc/apache2/sites-available/
+```
+
+Enable a website configuration:
+
+```bash
+sudo a2ensite mywebsite.conf
+```
+
+Disable it:
+
+```bash
+sudo a2dissite mywebsite.conf
+```
+
+### Nginx on Amazon Linux
+
+Main configuration:
+
+```bash
+sudo nano /etc/nginx/nginx.conf
+```
+
+Additional configurations:
+
+```bash
+cd /etc/nginx/conf.d/
+```
+
+### Nginx on Ubuntu
+
+Main configuration:
+
+```bash
+sudo nano /etc/nginx/nginx.conf
+```
+
+Available website configurations:
+
+```bash
+cd /etc/nginx/sites-available/
+```
+
+Enabled website configurations:
+
+```bash
+cd /etc/nginx/sites-enabled/
+```
+
+Enable a website configuration using a symbolic link:
+
+```bash
+sudo ln -s /etc/nginx/sites-available/mywebsite /etc/nginx/sites-enabled/
+```
+
+Test configuration before reloading:
+
+```bash
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+---
+
+## 10. `httpd` vs `apache2` — Remember This
+
+| Operating System | Apache Package | Apache Service |
 |---|---|---|
 | Amazon Linux 2023 | `httpd` | `httpd` |
 | Ubuntu | `apache2` | `apache2` |
 
-`httpd` and `apache2` are names for the same Apache HTTP Server software on different Linux distributions. On Ubuntu, install and manage `apache2`; do not try to install `httpd` as a separate web server.
+`httpd` and `apache2` are names for the same Apache HTTP Server software on different Linux distributions.
 
-## 9. Test the web server
+On Ubuntu, install and manage `apache2`; do not try to install `httpd` as a separate web server.
+
+---
+
+## 11. Test the Web Server
 
 ### Step 1: Test locally from the instance
 
@@ -267,10 +616,12 @@ HTTP/1.1 200 OK
 In the EC2 Security Group, add an inbound rule:
 
 | Type | Protocol | Port | Source |
-|---|---|---:|---|
+|---|---|---|---|
 | HTTP | TCP | 80 | Your IP or an appropriate allowed range |
 
-For a public website, `0.0.0.0/0` allows access from anywhere over IPv4. Use this only when the website is intended to be public. Also check the instance firewall if one is enabled.
+For a public website, `0.0.0.0/0` allows access from anywhere over IPv4. Use this only when the website is intended to be public.
+
+Also check the instance firewall if one is enabled.
 
 ### Step 3: Open the website
 
@@ -280,19 +631,31 @@ Find the instance's Public IPv4 address and visit:
 http://YOUR_PUBLIC_IP
 ```
 
-### Step 4: Add a simple test page
+### Step 4: Check website logs
 
-The common Apache document root is `/var/www/html`. Nginx's default document root can vary by distribution/package; check its active server configuration.
-
-For a simple test on either server:
+Apache on Amazon Linux:
 
 ```bash
-echo "<h1>Hello from Linux Web Server</h1>" | sudo tee /var/www/html/index.html
+sudo tail -f /var/log/httpd/access_log
 ```
 
-Refresh the browser. If the Nginx default site uses a different root, put the test page in that configured directory instead.
+Apache on Ubuntu:
 
-## 10. Basic service commands
+```bash
+sudo tail -f /var/log/apache2/access.log
+```
+
+Nginx:
+
+```bash
+sudo tail -f /var/log/nginx/access.log
+```
+
+Use `Ctrl + C` to stop following the logs.
+
+---
+
+## 12. Basic Service Commands
 
 | Action | Amazon Linux Apache | Ubuntu Apache | Nginx (both) |
 |---|---|---|---|
@@ -304,7 +667,9 @@ Refresh the browser. If the Nginx default site uses a different root, put the te
 
 **Note:** Apache and Nginx commonly both listen on port 80 by default. Stop one before starting the other with the default configuration, or configure different ports / a reverse-proxy setup.
 
-## 11. Troubleshooting commands
+---
+
+## 13. Troubleshooting Commands
 
 Check which process is using port 80:
 
@@ -330,7 +695,7 @@ Test Apache configuration on Ubuntu:
 sudo apache2ctl configtest
 ```
 
-View service logs (replace the service name as appropriate):
+View service logs:
 
 ```bash
 sudo journalctl -u nginx
@@ -338,7 +703,9 @@ sudo journalctl -u httpd
 sudo journalctl -u apache2
 ```
 
-## 12. Quick installation revision
+---
+
+## 14. Quick Installation Revision
 
 | Server | Amazon Linux 2023 | Ubuntu |
 |---|---|---|
@@ -353,11 +720,20 @@ sudo journalctl -u apache2
 
 ---
 
-## Servers and Clients Work Together
+## 15. Servers and Clients Work Together
 
-![How Servers and Clients Work Together](images\How_Servers_and_Clients_Work_Together.png)
-
+![How Servers and Clients Work Together](images/How_Servers_and_Clients_Work_Together.png)
 
 ---
 
-**Dated:** 20 November 2026
+## References
+
+- [Amazon Linux 2023 Documentation](https://docs.aws.amazon.com/linux/al2023/ug/)
+- [Ubuntu Server Documentation](https://ubuntu.com/server/docs/)
+- [OpenSSH Documentation](https://man.openbsd.org/sshd_config)
+- [Apache HTTP Server Documentation](https://httpd.apache.org/docs/2.4/)
+- [Nginx Documentation](https://nginx.org/en/docs/)
+
+---
+
+**Dated: 20 November 2026**
