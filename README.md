@@ -31,3 +31,5 @@
 - [Day 3 - AWS, EC2, Deployment, Security and Remote Access](B---AWS-Logs/day-03-AWS_EC2_Deployment_Security_and_Remote_Access/notes.md)
 - [Day 4 - Linux Server Setup, SSH, Apache, Nginx](B---AWS-Logs/day-04-linux-server-setup-ssh-apache-nginx/notes.md)
 - [Day 5 - Custom AMI, Launch Template and Instance Types](B---AWS-Logs/day-05-aws-ec2-ami-launch-template-instance-type/notes.md)
+- [Day 6 - AWS EC2 Advanced Settings and Purchasing Options](B---AWS-Logs/day-06-AWS_EC2_Advanced_Settings_and_Purchasing_Options/notes.md)
+- [Day 7 - AWS EBS Volumes and Linux Mounting](B---AWS-Logs/day-07-AWS_EBS_Volumes_and_Linux_Mounting/notes.md)
