@@ -377,6 +377,14 @@ To avoid unnecessary charges after practice:
 
 ---
 
+## EFS Mounting Workflow
+
+The following diagram explains how an EC2 instance connects to EFS.
+
+![EFS Mounting Workflow](diagrams/efs-mount-workflow.svg)
+
+---
+
 # Quick Revision
 
 <details>
