@@ -34,3 +34,4 @@
 - [Day 6 - AWS EC2 Advanced Settings and Purchasing Options](B---AWS-Logs/day-06-AWS_EC2_Advanced_Settings_and_Purchasing_Options/notes.md)
 - [Day 7 - AWS EBS Volumes and Linux Mounting](B---AWS-Logs/day-07-AWS_EBS_Volumes_and_Linux_Mounting/notes.md)
 - [Day 8 - AWS EBS Persistent Mounting and Snapshots](B---AWS-Logs/day-08-AWS_EBS_Persistent_Mounting_and_Snapshots/notes.md)
+- [Day 9 - AWS EFS](B---AWS-Logs/day-09-AWS-EFS/notes.md)
