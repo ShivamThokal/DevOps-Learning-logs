@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker>
+  <style>
+    .title{font: bold 28px Arial; fill:#0f172a}.label{font: bold 20px Arial; fill:#0f172a}
+    .small{font: 16px Arial; fill:#334155}.tiny{font: 14px Arial; fill:#475569}
+    .box{stroke-width:2;rx:14}.line{stroke:#64748b;stroke-width:3;fill:none;marker-end:url(#arrow)}
+  </style>
+</defs>
+<rect width="1200" height="690" fill="#ffffff"/>
+<text x="600" y="48" text-anchor="middle" class="title">Amazon EFS — Shared File Storage</text>
+<rect x="45" y="85" width="1110" height="555" rx="22" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+<text x="75" y="122" class="label">AWS Region</text>
+<rect x="85" y="150" width="1030" height="445" rx="18" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+<text x="110" y="185" class="label">VPC</text>
+<rect x="120" y="220" width="430" height="315" class="box" fill="#ffffff" stroke="#93c5fd"/>
+<text x="335" y="255" text-anchor="middle" class="label">Availability Zone A</text>
+<rect x="650" y="220" width="430" height="315" class="box" fill="#ffffff" stroke="#93c5fd"/>
+<text x="865" y="255" text-anchor="middle" class="label">Availability Zone B</text>
+<rect x="160" y="300" width="155" height="105" class="box" fill="#dbeafe" stroke="#3b82f6"/>
+<text x="237" y="340" text-anchor="middle" class="label">EC2</text><text x="237" y="370" text-anchor="middle" class="small">Ubuntu client</text>
+<rect x="355" y="300" width="155" height="105" class="box" fill="#dbeafe" stroke="#3b82f6"/>
+<text x="432" y="340" text-anchor="middle" class="label">EC2</text><text x="432" y="370" text-anchor="middle" class="small">Amazon Linux</text>
+<rect x="690" y="300" width="155" height="105" class="box" fill="#dbeafe" stroke="#3b82f6"/>
+<text x="767" y="340" text-anchor="middle" class="label">EC2</text><text x="767" y="370" text-anchor="middle" class="small">Ubuntu client</text>
+<rect x="885" y="300" width="155" height="105" class="box" fill="#dbeafe" stroke="#3b82f6"/>
+<text x="962" y="340" text-anchor="middle" class="label">EC2</text><text x="962" y="370" text-anchor="middle" class="small">Amazon Linux</text>
+<rect x="455" y="455" width="290" height="105" class="box" fill="#dcfce7" stroke="#16a34a"/>
+<text x="600" y="493" text-anchor="middle" class="label">EFS File System</text>
+<text x="600" y="520" text-anchor="middle" class="small">Shared files • Managed by AWS</text>
+<text x="600" y="542" text-anchor="middle" class="tiny">Mount targets provide network access</text>
+<path d="M237 405 L485 455" class="line"/><path d="M432 405 L530 455" class="line"/>
+<path d="M767 405 L715 455" class="line"/><path d="M962 405 L735 455" class="line"/>
+<text x="600" y="615" text-anchor="middle" class="small">Clients connect over NFSv4.1 using TCP port 2049</text>
+</svg>
